@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
+    <title>Consulta</title>
+</head>
+<body>
+    
+    <fieldset>
+        <legend>Preencha o formulário com os dados de publicação</legend>
+        <form>
+            <div style="display:flex; justify-content: right;">
+                <input type="button" onclick="verificar()" value="Buscar"><br></div>
+
+                <!-- Campo Autor -->
+                <input type="radio" id="radio1" onclick="habilitarInput('radio1','radio1_back','radio1_back','input1')">
+                <input type="radio" id="radio1_back" onclick="habilitarInput('radio1_back','radio1','radio1_back','input1')" hidden>
+                <label>Autor:&nbsp; </label><input type="text" name="" id="input1" disabled><br>
+
+                <!-- Campo Titulo -->
+                <input type="radio" id="radio2" onclick="habilitarInput('radio2','radio2_back','radio2_back','input2')">
+                <input type="radio" id="radio2_back" onclick="habilitarInput('radio2_back','radio2','radio2_back','input2')" hidden>
+                <label>Título: </label><input type="text" name="" id="input2" disabled><br>
+
+                <!-- Campo ISBN -->
+                <input type="radio" id="radio3" onclick="habilitarInput('radio3','radio3_back','radio3_back','input3')">
+                <input type="radio" id="radio3_back" onclick="habilitarInput('radio3_back','radio3','radio3_back','input3')" hidden>
+                <label>ISBN:&nbsp; </label><input type="text" name="" id="input3" disabled><br>
+        </form>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,16 @@
+input[type="button"] {
+    display: block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+fieldset {
+    width: 430px;
+    margin:auto;
+    padding:20px;
+    background-color: rgb(243, 243, 243);
+}
+input[type="text"] {
+    width: 80%;
+    margin-bottom: 15px;
+}
