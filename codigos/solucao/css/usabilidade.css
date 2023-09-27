@@ -1,0 +1,38 @@
+.btnCancelar {
+    border: 1px solid red;
+    background-color:red;
+}
+.tooltip > .tooltip-inner {
+    width:150px;
+}
+.tamBotaoPadrao {
+    width:120px;
+}
+.corIFTM {
+    color:green;
+    font-weight: bold;
+}
+.corAviso {
+    color:red;
+}
+.espacoVertical {
+    margin:15px 0px 15px 0px;
+}
+.cursorLink {
+    cursor: pointer;
+}
+.cabecalho {
+    background-color:green;
+}
+.cabecalho h1 {
+    color:white;
+    text-shadow:1px 1px 1px black;
+    font-weight: bold;
+}
+.cabecalho p {
+    color:yellow;
+}
+/*Usabilidade: Estetica e design minimalista (exibe a barra de progresso apenas quando clicar no btn pesquisar)*/
+.invisivel {
+    display: none;
+}

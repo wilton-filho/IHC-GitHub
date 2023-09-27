@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Biblioteca do IFTM</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/usabilidade.js"></script>
+        <link href="css/usabilidade.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <!-- Usabilidade: completar informações dos campos -------->
+                    <form class="form-horizontal" autocomplete="on">
+                        
+                        <!-- CABECALHO: Nome do sistema ----------------------->
+                        <div class="well well-sm cabecalho">
+                            <h1 class="text-center espacoVertical">Biblioteca do IFTM</h1>
+                            <p class="corAviso text-center col-md-offset-0">Sistema on-line para consulta ao acervo (livros, revistas, dissertações, relatórios, etc) da biblioteca do IFTM campus Uberlândia Centro.</p>
+                            <!-- MOLDURA ao redor dos campos do formulário ---->
+                        </div>
+                        
+                        <!-- CAMPOS DO FORMULÁRIO ----------------------------->
+                        <div class="well">
+                            <!-- GRUPO: AUTOR --------------------------------->
+                            <div id="autorGrupo" class="form-group">
+                                <label class="col-md-2 control-label">Autor(es):</label>
+                                <div class="col-md-10"><input id="txtAutor" type="text" class="form-control" placeholder="Para mais de um nome de autor separe-os por ; Ex: João; Maria; Carla" data-toggle="tooltip" data-placement="right" title="Informe apenas letras, espaços em branco e ponto e vírgula" onmouseover="ocultarTooltip()"></div>
+                            </div>
+
+                            <!-- GRUPO: ASSUNTO ------------------------------->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Assunto(s):</label>
+                                <div class="col-md-10"><input id="txtAssunto" type="text" class="form-control" placeholder="Separe as palavras por espaço. Ex: apostila de html" title="Separe as palavras por espaço. Ex: apostila de html"></div>
+                            </div>
+
+                            <!-- GRUPO: MAIS OPCOES DE CONSULTA --------------->
+                            <!-- Usabilidade: Disponibilizar no formulário apenas itens de uso mais frequente do usuário -->
+                            <a class="col-md-offset-2 cursorLink" data-toggle="collapse" data-target="#demo">Mais opções de consulta</a>
+                            <div id="demo" class="collapse">
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">ISBN:</label>
+                                    <div class="col-md-10"><input type="text" class="form-control" placeholder="Informe o International Standard Book Number (10 ou 13 dígitos)"></div>
+                                </div>
+                            </div>
+
+                            <!-- GRUPO: BOTOES -------------------------------->
+                            <div class="form-group espacoVertical" style="margin:auto;">
+                                <!-- BOTAO PESQUISAR -------------------------->
+                                <button id="btnPesquisar" type="button" class="col-md-offset-3 btn btn-primary btn-sm tamBotaoPadrao" onclick="validarFormulario()">
+                                    <span class="glyphicon glyphicon-search" id="iconePesquisar"></span> 
+                                    <span id="lbPesquisar">Pesquisar</span> 
+                                </button>
+                                <!-- BOTAO LIMPAR--- -------------------------->
+                                <!-- Usabilidade: inserção do botão limpar ---->
+                                <button type="reset" class="btn btn-primary btn-sm tamBotaoPadrao">
+                                    <span class="glyphicon glyphicon-erase"></span> Limpar 
+                                </button>
+                                <!-- BOTAO AJUAR---- -------------------------->
+                                <!-- Usabilidade: inserção do botão de ajuda -->
+                                <button type="button" class="btn btn-primary btn-sm tamBotaoPadrao" data-toggle="modal" data-target="#modalAjuda">
+                                    <span class="glyphicon glyphicon-question-sign"></span> Ajuda 
+                                </button>
+
+                                <!-- JANELA MODAL PARA O SISTEMA DE AJUDA ----->
+                                <div class="modal fade" id="modalAjuda">
+                                  <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                      <!-- Titulo da janela modal ------------->
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Ajuda - Consulta ao acervo da Biblioteca do IFTM</h4>
+                                      </div>
+                                      <!-- Conteúdo da janela modal ----------->
+                                      <div class="modal-body">
+                                        <p>O sistema de ajuda da interface será colocado aqui.</p>
+                                      </div>
+                                      <!-- Botão da janela modal -------------->
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="boxProgressBar" class="progress invisivel">
+                            <div id="progressBar" class="progress-bar" style="width:0%"></div>
+                        </div>
+                    </form>    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
