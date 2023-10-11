@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #DEE9FF;
+}
+
+
+.boxIntroducao, .container {
+    width: 650px;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    border-radius: 20px;    
+    padding: 30px;    
+}
+
+.boxIntroducao {
+    margin-top: 50px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 70px;    
+    padding-top: 40px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.container label {
+    margin: 20px 0px 5px 0px;
+    font-weight: bold;
+}
+
+.inputText {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.boxLinhas {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0px;
+}
+
+.boxLinhas>div {
+    width: 100%;
+}
+
+.boxLinhas>div:nth-of-type(1) {
+    padding-right: 15px;
+}
+.boxLinhas>div:nth-of-type(2) {
+    padding-right: 15px;
+}
+
+.boxLinhas>div * {
+    display: block;
+    width: 100%;
+    padding: 5px;
+}
+
+.rotuloSecao {
+    text-transform: uppercase;
+    border-bottom: 2px solid green;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 30px;
+    background-color: rgb(234, 234, 234);
+    padding: 10px 5px 5px 5px;
+    letter-spacing: 1px;
+}
+
+.obrigatorio {
+    color: red;
+    margin-right: 5px;
+    font-weight: normal;
+    font-size:13px;
+}
+
+input {
+    border: 1px solid rgb(203, 203, 203);
+    outline: none;
+}
+
+input:focus {
+    /* border:1px solid rgb(2, 199, 2); */
+    box-shadow: 1px 1px 5px green;
+    background-color: rgb(246, 255, 246);
+}
+
+input[type="radio"] {
+    display: inline;
+}
+
+.boxRadios {
+    display: flex;
+    flex-direction: row;
+}
+.boxRadios label {
+    margin:10px;
+    margin-left: 10px;
+}
+.msgAviso {
+    margin: 20px 0px 10px 0px;
+    font-weight: bold;
+}
+.horario {
+    border:none;
+    border-bottom: 1px solid gray;
+    width:70px;
+    text-align: center;
+}
+label[for^="opcMonitoria"] {
+    font-weight: normal;
+}
+
+input[type="radio"]:focus {
+    box-shadow: none;
+}
+.boxBotoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: center;
+}
+.boxBotoes input[type="button"], .boxBotoes input[type="submit"] {
+    width: 40%;
+    margin:5px;
+    padding: 10px;
+    background-color: #4170ce;
+    border: 0px;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boxBotoes input[type="button"]:hover, .boxBotoes input[type="submit"]:hover {
+    box-shadow: 1px 1px 3px black;
+}
+.boxIntroducao {
+
+}
